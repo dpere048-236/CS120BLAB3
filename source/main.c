@@ -27,17 +27,18 @@ int main(void) {
 	unsigned char tmpB = 0x00; //temp vriable for B
         unsigned char tmpA = 0x00; //variable for A
         unsigned char  buttonC = 0x00; //temp variable for portA+B
+	unsigned char i = 0;
     /* Insert your solution below */
     while (1) {
         tmpA = PINA; //pins on A se
 	tmpB = PINB;
 	buttonC = 0x00;
-	for(int i = 0; i < 8; i++){
+	for(i = 0; i < 8; i++){
 		if(BitManip2(tmpA, i)){
 			buttonC++;
 		}
 }
-	for(int i = 0; i < 8; i++){
+	for(i = 0; i < 8; i++){
 		if(BitManip2(tmpB, i)){
 			buttonC++;
 	}
